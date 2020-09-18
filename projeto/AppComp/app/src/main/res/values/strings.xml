@@ -2,6 +2,8 @@
     <string name="app_name">AppComp</string>
     <string name="toast_me">Toast me</string>
     <string name="snack_me">Snack me</string>
+    <string name="obter_spinner">Obter spinner</string>
+    <string name="atribuir_spinner">Atribuir spinner</string>
 
     <string-array name="spinner_values">
         <item>Gramas</item>
