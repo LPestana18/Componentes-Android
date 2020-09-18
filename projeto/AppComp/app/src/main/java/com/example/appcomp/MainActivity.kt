@@ -7,6 +7,7 @@ import android.view.Gravity
 import android.view.View
 import android.widget.TextView
 import android.widget.Toast
+import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
@@ -15,10 +16,11 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         setContentView(R.layout.activity_main)
 
         button_toast.setOnClickListener(this)
+        button_snack.setOnClickListener(this)
     }
 
     override fun onClick(v: View) {
-        when(v.id) {
+        when (v.id) {
             R.id.button_toast -> {
                 val toast = Toast.makeText(this, "TOAST", Toast.LENGTH_LONG)
 
@@ -31,6 +33,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 toast.view = layout
 
                 toast.show()
+            }
+            R.id.button_snack -> {
+                val snack = Snackbar.make(linear_root, "Snack", Snackbar.LENGTH_LONG)
+                snack.show()
             }
         }
     }

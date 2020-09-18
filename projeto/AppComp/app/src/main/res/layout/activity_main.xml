@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/linear_root"
     android:orientation="vertical"
     android:padding="16dp"
     tools:context=".MainActivity">
@@ -14,7 +15,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="Toast me"
+        android:text="@string/toast_me"
+        />
+
+    <Button
+        android:id="@+id/button_snack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/snack_me"
         />
 
 
