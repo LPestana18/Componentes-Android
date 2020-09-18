@@ -61,6 +61,46 @@
             android:text="@string/atribuir_spinner" />
 
     </LinearLayout>
+    
+    <SeekBar
+        android:id="@+id/seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="50"
+        android:layout_marginTop="32dp"
+        />
 
+    <TextView
+        android:id="@+id/text_seekbar_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/valor_seekbar" />
+
+    <!--Botões obter e atribuir seekbar-->
+    <LinearLayout
+        android:id="@+id/linear_button_seek"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/textSeekValue">
+
+        <Button
+            android:id="@+id/button_get_seekbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:text="@string/obter_seekbar" />
+
+        <Button
+            android:id="@+id/button_set_seekbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:text="@string/atribuir_seekbar" />
+
+    </LinearLayout>
 
 </LinearLayout>

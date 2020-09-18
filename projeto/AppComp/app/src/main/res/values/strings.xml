@@ -4,6 +4,9 @@
     <string name="snack_me">Snack me</string>
     <string name="obter_spinner">Obter spinner</string>
     <string name="atribuir_spinner">Atribuir spinner</string>
+    <string name="valor_seekbar">Valor seekbar: 0</string>
+    <string name="obter_seekbar">Obter seekbar</string>
+    <string name="atribuir_seekbar">Atribuir seekbar</string>
 
     <string-array name="spinner_values">
         <item>Gramas</item>
