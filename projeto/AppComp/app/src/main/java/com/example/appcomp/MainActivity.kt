@@ -28,6 +28,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, AdapterView.OnIt
 
         switch_on_off.setOnCheckedChangeListener(this)
         check_on_of.setOnCheckedChangeListener(this)
+        radio_on.setOnCheckedChangeListener(this)
+        radio_of.setOnCheckedChangeListener(this)
 
         loadSpinner()
     }
@@ -87,6 +89,12 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, AdapterView.OnIt
             R.id.check_on_of -> {
                 toast("Checkbox: ${if (isChecked) "true" else "false"}")
 //                check_on_of.isChecked = true
+            }
+            R.id.radio_on -> {
+                toast("Radio on: ${if (isChecked) "true" else "false"}")
+            }
+            R.id.radio_of -> {
+                toast("Radio of: ${if (isChecked) "true" else "false"}")
             }
         }
     }

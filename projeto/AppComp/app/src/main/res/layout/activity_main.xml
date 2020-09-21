@@ -27,8 +27,8 @@
         android:id="@+id/spinner_static"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:entries="@array/spinner_values"
-        android:layout_marginTop="16dp" />
+        android:layout_marginTop="16dp"
+        android:entries="@array/spinner_values" />
 
     <Spinner
         android:id="@+id/spinner_dynamic"
@@ -42,7 +42,7 @@
         android:id="@+id/linear_button_spinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/button_get_spinner"
@@ -61,14 +61,13 @@
             android:text="@string/atribuir_spinner" />
 
     </LinearLayout>
-    
+
     <SeekBar
         android:id="@+id/seekbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:max="50"
         android:layout_marginTop="32dp"
-        />
+        android:max="50" />
 
     <TextView
         android:id="@+id/text_seekbar_value"
@@ -107,22 +106,35 @@
         android:id="@+id/switch_on_off"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        />
+        android:layout_marginTop="16dp" />
 
     <CheckBox
         android:id="@+id/check_on_of"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="On / off"
-        android:checked="false"
         android:layout_marginTop="16dp"
+        android:checked="false"
+        android:text="On / off"
 
-    />
+        />
 
-    <RadioButton
+    <RadioGroup
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        />
-    
+        android:layout_marginTop="16dp">
+
+        <RadioButton
+            android:id="@+id/radio_on"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Radio on" />
+
+        <RadioButton
+            android:id="@+id/radio_of"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Radio off" />
+
+    </RadioGroup>
+
 </LinearLayout>
