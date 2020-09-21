@@ -9,7 +9,9 @@ import android.widget.*
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity(), View.OnClickListener, AdapterView.OnItemSelectedListener, SeekBar.OnSeekBarChangeListener {
+class MainActivity : AppCompatActivity(), View.OnClickListener, AdapterView.OnItemSelectedListener,
+    SeekBar.OnSeekBarChangeListener,
+    CompoundButton.OnCheckedChangeListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -23,6 +25,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, AdapterView.OnIt
 
         spinner_static.onItemSelectedListener = this
         seekbar.setOnSeekBarChangeListener(this)
+
+        switch_on_off.setOnCheckedChangeListener(this)
 
         loadSpinner()
     }
@@ -73,6 +77,15 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, AdapterView.OnIt
         }
     }
 
+    override fun onCheckedChanged(buttonView: CompoundButton, isChecked: Boolean) {
+        when (buttonView.id) {
+            R.id.switch_on_off -> {
+                toast("Switch: ${if (isChecked) "true" else "false"}")
+//                switch_on_off.isChecked = true
+            }
+        }
+    }
+
     override fun onNothingSelected(parent: AdapterView<*>?) {
         toast("nothing")
     }
@@ -107,5 +120,4 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, AdapterView.OnIt
         val toast = Toast.makeText(this, str, Toast.LENGTH_SHORT).show()
 
     }
-
 }
